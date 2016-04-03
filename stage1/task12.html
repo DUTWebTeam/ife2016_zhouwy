@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>css3特性</title>
+	<style type="text/css">
+		*{
+  			margin:0;
+  			padding:0;
+  			text-decoration:none;
+		}
+		table{
+			margin-bottom: 100px;
+		}
+		thead{
+		  background:#000;
+		  color:#fff;
+		}
+		tbody{
+		  color:red;
+		}
+		tbody tr:nth-child(even){
+		  background:grey;
+		}
+		tbody tr:nth-of-type(n+4){
+		  color:#000;
+		}
+		input{
+		  margin:0 auto 100px 50px;
+		  width:100px;
+		  transition:width 2s;
+		}
+		input:focus{
+		  width:200px;
+		  border:blue solid 2px;
+		}
+		a:link,a:visited{
+		  color:#000;
+		}
+		#container{
+		  margin:10px;
+		  height:100px;
+		  width:200px;
+		  position:relative;
+		  overflow:hidden;
+		}
+		#gallery{
+		  width:600px;
+		  transition:left 2s;
+		  position:absolute;
+		  bottom:0px;
+		}
+		.banner{
+		  width:200px;
+		  height:100px;
+		  float:left;
+		}
+		#green{
+		  background:green;
+		}
+		#blue{
+		  background:blue;
+		}
+		#yellow{
+		  background:yellow;
+		}
+		ul{
+		  list-style:none;
+		  position:absolute;
+		  bottom:0;
+		  right:0;
+		}
+		li{
+		  margin-left:2px;
+		  background:grey;
+		  opacity:0.7;
+		  float:left;
+		  text-align:center;
+		}
+		li a{
+		  display:block;
+		  width:30px;
+		  height:30px;
+		  line-height:30px;
+		}
+		.token{
+		  display:none;
+		}
+		#first:target~#gallery{
+		  left:0;
+		}
+		#second:target~#gallery{
+		  left:-200px;
+		}
+		#third:target~#gallery{
+		  left:-400px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+	  <thead>
+	    <tr>
+	      <th>排名</th>
+	      <th>网站</th>
+	      <th>热度</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>1.</td>
+	      <td>百度前端技术学院</td>
+	      <td>13000</td>
+	    </tr>
+	    <tr>
+	      <td>2.</td>
+	      <td>百度前端技术学院</td>
+	      <td>12000</td>
+	    </tr>
+	    <tr>
+	      <td>3.</td>
+	      <td>百度前端技术学院</td>
+	      <td>11000</td>
+	    </tr>
+	    <tr>
+	      <td>4.</td>
+	      <td>百度前端技术学院</td>
+	      <td>10000</td>
+	    </tr>
+	    <tr>
+	      <td>5.</td>
+	      <td>百度前端技术学院</td>
+	      <td>9000</td>
+	    </tr>
+	    <tr>
+	      <td>6.</td>
+	      <td>百度前端技术学院</td>
+	      <td>8000</td>
+	    </tr>
+	    <tr>
+	      <td>7.</td>
+	      <td>百度前端技术学院</td>
+	      <td>7000</td>
+	    </tr>
+	    <tr>
+	      <td>8.</td>
+	      <td>百度前端技术学院</td>
+	      <td>6000</td>
+	    </tr>
+	    <tr>
+	      <td>9.</td>
+	      <td>百度前端技术学院</td>
+	      <td>5000</td>
+	    </tr>
+	    <tr>
+	      <td>10.</td>
+	      <td>百度前端技术学院</td>
+	      <td>4000</td>
+	    </tr>
+	  </tbody>
+	</table>
+
+	<input type="text" />
+
+	<div id="container">
+	  <div id="first" class="token"></div>
+	  <div id="second" class="token"></div>
+	  <div id="third" class="token"></div>
+	  <div id="gallery">
+	      <div class="banner" id='green'></div>
+	      <div class="banner" id='blue'></div>
+	      <div class="banner" id='yellow'></div>
+	  </div>
+	  <ul>
+	    <li><a href="#first">1</a></li>
+	    <li><a href="#second">2</a></li>
+	    <li><a href="#third">3</a></li>
+	  </ul>
+	</div>
+</body>
+</html>
