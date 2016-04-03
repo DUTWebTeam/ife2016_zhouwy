@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta charset="UTF-8">
+	<title>flex布局</title>
+</head>
+<style TYPE="text/css">
+	#container{
+	  display:flex;  
+	  justify-content:space-between;
+	  background:silver;
+	  padding:20px;
+	}
+	.b{
+	  width:150px;
+	  border:1px solid red;
+	  margin:10px;
+	}
+	#a1{
+	  height:120px;
+	}
+	#a2{
+	  height:100px;
+	}
+	#a3{
+	  height:40px;
+	}
+	#a4{
+	  height:200px;
+	  border:1px solid blue;
+	}
+	@media screen and (min-width:640px){
+	  #container{
+	    align-items:center;
+	  }
+	}
+
+	@media screen and (max-width:639px) {
+	  #container {
+	    align-items: flex-start;
+	    flex-wrap:wrap;
+	  }
+	  #a4{
+	  	order:-1;
+	  }
+	}
+</style>
+<body>
+	<div id="container">
+		<div id="a1" class="b"></div>
+		<div id="a2" class="b"></div>
+		<div id="a3" class="b"></div>
+		<div id="a4" class="b"></div>
+	</div>
+</div>
+</body>
+</html>

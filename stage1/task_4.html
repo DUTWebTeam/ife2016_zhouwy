@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>水平垂直居中</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+
+		div#main{
+			height: 200px;
+			width:400px;
+			background:#ccc;
+			position:absolute;
+			top: 50%;
+			left:50%;
+			transform: translate(-50%,-50%);
+			overflow: hidden;
+		}
+
+		div.arc{
+			height:0;
+			width: 0;
+			border: 50px solid #fc0;
+			border-radius: 50%;
+			position:absolute;
+		}
+
+		#left{
+			left:-50px;
+			top: -50px;
+		}
+		#right{
+			left:100%;
+			top: 100%;
+			transform: translate(-50px,-50px);
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div id="left" class="arc"></div>
+		<div id="right" class="arc"></diiv>
+	</div>
+</body>
+</html>
